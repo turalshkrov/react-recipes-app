@@ -1,0 +1,17 @@
+.navbar {
+    width: 18%;
+    height: 100vh;
+    position: fixed;
+    padding: 10px;
+}
+
+.navbar a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+.navbar a.active {
+    color: #f93f23;
+}
