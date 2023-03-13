@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +8,10 @@
 
 .page {
   display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 main {
-  width: 82%;
-  margin-left: 18%;
+  width: 84%;
+  margin-left: 16%;
 }

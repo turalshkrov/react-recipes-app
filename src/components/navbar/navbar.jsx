@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faMagnifyingGlass, faBookmark, faPlus } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css';
 
 export default function Navbar() {
@@ -9,9 +11,9 @@ export default function Navbar() {
             <h2>Recipes</h2>
         </div>
       <nav>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/search'>Search</NavLink>
-        <NavLink to='/library'>Library</NavLink>
+        <NavLink to='/'><FontAwesomeIcon icon={faHome}/> Home</NavLink>
+        <NavLink to='/search'><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</NavLink>
+        <NavLink to='/library'><FontAwesomeIcon icon={faBookmark}/> Your Library</NavLink>
       </nav>
     </div>
   )
