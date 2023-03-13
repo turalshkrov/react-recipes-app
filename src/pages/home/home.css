@@ -1,3 +1,20 @@
 .home-page-title {
-    margin-top: 24px;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #303030;
+}
+#meal-types {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.type-card {
+    width: 20%;
+    margin: 2.5%;
+}
+.type-card img {
+    width: 100%;
 }

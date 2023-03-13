@@ -14,4 +14,6 @@
 main {
   width: 84%;
   margin-left: 16%;
+  background: #efefef;
+  padding: 24px 40px;
 }

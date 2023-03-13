@@ -15,14 +15,13 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    color: #000;
+    color: #222;
     text-decoration: none;
     padding: 7px 0;
     font-size: 1.2rem;
     font-weight: 600;
 }
 .navbar a:hover{
-    transition: .3s;
     text-decoration: underline;
 }
 .navbar a.active {

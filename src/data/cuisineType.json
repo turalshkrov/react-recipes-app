@@ -1,0 +1,110 @@
+[
+    {
+        "title": "American",
+        "id": 1,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=American",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/american.png"
+    },
+    {
+        "title": "Asian",
+        "id": 2,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Asian",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/asian.png"
+    },
+    {
+        "title": "British",
+        "id": 3,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=British",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/english.png"
+    },
+    {
+        "title": "Caribbean",
+        "id": 4,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Caribbean",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/cuban.png"
+    },
+    {
+        "title": "Central Europe",
+        "id": 5,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Central%20Europe",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/hungarian.png"
+    },
+    {
+        "title": "Chinese",
+        "id": 6,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Chinese",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/chinese.png"
+    },
+    {
+        "title": "Eastren Europe",
+        "id": 7,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Eastren%20Europe",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/greek.png"
+    },
+    {
+        "title": "French",
+        "id": 8,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=French",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/french.png"
+    },
+    {
+        "title": "Indian",
+        "id": 9,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Indian",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/indian.png"
+    },
+    {
+        "title": "Italian",
+        "id": 10,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Italian",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/italian.png"
+    },
+    {
+        "title": "Japanese",
+        "id": 11,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Japanese",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/japanese.png"
+    },
+    {
+        "title": "Kosher",
+        "id": 12,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Kosher",
+        "cover": ""
+    },
+    {
+        "title": "Mediterranean",
+        "id": 13,
+        "url": "https://x.yummlystatic.com/web/bubble/cuisine/mediterranean.png",
+        "cover": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Mediterranean"
+    },
+    {
+        "title": "Mexican",
+        "id": 14,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Mexican",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/mexican.png"
+    },
+    {
+        "title": "Middle Eastren",
+        "id": 15,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Middle%20Eastren",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/moroccan.png"
+    },
+    {
+        "title": "Nordic",
+        "id": 16,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=Nordic",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/swedish.png"
+    },
+    {
+        "title": "South American",
+        "id": 17,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=South%20American",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/brazilian.png"
+    },
+    {
+        "title": "South East Asian",
+        "id": 18,
+        "url": "https://api.edamam.com/api/recipes/v2?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18&cuisineType=South%20East%20Asian",
+        "cover": "https://x.yummlystatic.com/web/bubble/cuisine/thai.png"
+    }
+]
