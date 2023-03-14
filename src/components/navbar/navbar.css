@@ -6,6 +6,7 @@
     position: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 1.5rem 0 0 1.5rem;background-color: #FFF;
+    box-shadow: 0 0 2em rgba(0,0,0,0.12);
     z-index: 1;
 }
 .navbar-logo {

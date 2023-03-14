@@ -27,7 +27,8 @@
     text-decoration: none;
 }
 .type-title:hover {
-    text-decoration: underline;
+    transition: .3s;
+    color: #3a9691;
 }
 
 .section-title {
