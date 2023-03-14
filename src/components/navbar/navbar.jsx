@@ -11,9 +11,9 @@ export default function Navbar() {
             <h2>Recipes</h2>
         </div>
       <nav>
-        <NavLink to='/'><FontAwesomeIcon icon={faHome}/> Home</NavLink>
-        <NavLink to='/search'><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</NavLink>
-        <NavLink to='/library'><FontAwesomeIcon icon={faBookmark}/> Your Library</NavLink>
+        <NavLink to='/'><FontAwesomeIcon icon={faHome}/><p className='nav-menu-link-text'>Home</p></NavLink>
+        <NavLink to='/search'><FontAwesomeIcon icon={faMagnifyingGlass}/><p className='nav-menu-link-text'>Search</p></NavLink>
+        <NavLink to='/library'><FontAwesomeIcon icon={faBookmark}/><p className='nav-menu-link-text'>Library</p></NavLink>
       </nav>
     </div>
   )

@@ -9,11 +9,28 @@
 .page {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff;
+  background-image: url('./assets/bg.png');
+  background-position: right top;
+  background-size: inherit;
+  background-repeat: no-repeat;
 }
 
 main {
   width: 84%;
   margin-left: 16%;
-  background: #efefef;
   padding: 24px 40px;
+}
+section, footer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    margin-bottom: 80px;
+    margin-left: 0;
+    padding: 1rem;
+  }
 }
