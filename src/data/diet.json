@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Balanced",
+        "id": 1,
+        "cover": "https://lh3.googleusercontent.com/DT53yTlxb_l-Gr2vzkqA5mTMhjua8_PscmFzyjcUGiuV64EcEP-TvIzi8rPFVY3xrE3S-D3s2ziKJQbj4i-7gQ=w640-h640-c-rw-v1-e365"
+    },
+    {
+        "title": "High-fiber",
+        "id": 2,
+        "cover": "https://lh3.googleusercontent.com/oatnwbzhpJYZikCxyavS3NGenM40h08iDsfQQSeQXCik-uf-sgD3BhboacKVz96j8xmPerQKZvXEv0dROQxybQ=w220-h220-c-rw-v1-e365"
+    },
+    {
+        "title": "High-protein",
+        "id": 3,
+        "cover": "https://lh3.googleusercontent.com/47WL3lSMYMOkGpTsjm82omM5Wj_m-xdgdiH6NsLr8Jk1SiVwFZFlGv4EVyKzMto4MUUzsKSWberKE-r_6Qdcr-APYL2ZkNhG8q_B=w220-h220-c-rw-v1-e365"
+    },
+    {
+        "title": "Low-carb",
+        "id": 4,
+        "cover": "https://lh3.googleusercontent.com/wZPFFBJTrADg_6Rd1fWl81MhzDUoCXOTy4lh4E_6LYkxrEAHf7m6qR-0rdLgSpU9PEgDtLPVN3ZXUW4P51Qr=w220-h220-c-rw-v1-e365"
+    },
+    {
+        "title": "Low-fat",
+        "id": 5,
+        "cover": "https://lh3.googleusercontent.com/QehBK9hG6mBznyzAwV01BKOemy6kCD5Xx-MqWZFxRYki6whMLiQsBNgHFR7UbB4m9nAgickRY485S9ztW_wBreY=w220-h220-c-rw-v1-e365"
+    },
+    {
+        "title": "Low-sodium",
+        "id": 6,
+        "cover": "https://lh3.googleusercontent.com/2PR4tqf5eRjxpUZ6xTtYtVfC3_Rx1d81f-M-n8MYC9NeEw8TL3yn_OH-o9w5CstP7P55U8cQWrQLVyO9Kmua9A=w220-h220-c-rw-v1-e365"
+    }
+]

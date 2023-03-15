@@ -37,10 +37,20 @@ export default function Home() {
           {
             mealTypes.map(type => {
               return(
-                <div key={type.id} className="type-card">
-                  <img src={type.cover} alt={type.title} />
-                  <Link to={`/meals/${type.title}`} className='type-title'>{type.title}</Link>
-                </div>
+                <Link 
+                  to={`/meals/${type.title}`} 
+                  key={type.id}
+                  className="type-card"
+                  >
+                  <div>
+                  <img 
+                    src={type.cover} 
+                    alt={type.title} />
+                  <p className='type-title'>
+                    {type.title}
+                  </p>
+                  </div>
+                </Link>
               )
             })
           }

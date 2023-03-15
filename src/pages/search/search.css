@@ -1,0 +1,121 @@
+#search-form {
+    width: 340px;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 23px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+#search-input {
+    width: 250px;
+    border: none;
+    font-size: 1.05rem;
+}
+#search-form svg {
+    color: #303030;
+}
+#search-clear {
+    cursor: pointer;
+}
+
+#recomend-section {
+    margin-top: 3rem;
+}
+.search-section-title {
+    margin: 2rem 1rem;
+    color: #303030;
+}
+.recomend-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.recomend-card {
+    width: 160px;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: .4s;
+    background-color: #f1f1f1;
+}
+.recomend-card:hover{
+    box-shadow: 0 0 1em rgba(0,0,0,0.3);
+}
+
+.recomend-card img {
+    border-radius: 10px;
+    width: 100%;
+}
+.recomend-title {
+    margin-top: .75rem;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .recomend-card {
+        width: 150px;
+        padding: 12px;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .recomend-card {
+        width: 120px;
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .recomend-container {
+        flex-wrap: wrap;
+        padding: 1.5rem;
+        justify-content: space-around;
+    }
+    .recomend-card {
+        width: 180px;
+        padding: 20px;
+        margin-bottom: 2rem;
+    }
+    .search-section-title {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .recomend-container {
+        padding: 0;
+    }
+    .recomend-card {
+        width: 150px;
+        padding: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #search-bar {
+        margin-top: 1rem;
+    }
+    #recomend-section {
+        margin-top: 2rem;
+    }
+    .search-section-title {
+        font-size: 1.5rem;
+    }
+    #search-form {
+        width: 90%;
+        margin: auto;
+    }
+    .recomend-card {
+        width: 100px;
+        padding: 8px;
+    }
+    .recomend-title {
+        margin-top: .5rem;
+        font-size: .8rem;
+    }
+}

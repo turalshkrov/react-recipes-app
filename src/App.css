@@ -6,14 +6,25 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 .page {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fff;
-  background-image: url('./assets/bg.png');
-  background-position: right top;
-  background-size: inherit;
-  background-repeat: no-repeat;
+  background-color: #fefefe;
 }
 
 main {
@@ -26,6 +37,12 @@ section, footer {
   margin: auto;
 }
 
+@media only screen and (max-width: 1140px) {
+  main {
+    padding: 1.5rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   main {
     width: 100%;
@@ -34,3 +51,4 @@ section, footer {
     padding: 1rem;
   }
 }
+
