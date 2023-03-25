@@ -4,29 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
-import diets from '../../data/diet.json'
-import './search.css'
+import diets from '../../data/diet.json';
+import dishTypes from '../../data/dishType.json';
+import './search.css';
+import RecipeCard from '../../components/recipeCard/recipeCard';
 
 export default function Search() {
   const [ searchKey, setSearchKey ] = useState('');
-  const [ searchResult, setSearchResult ] = useState();
+  const [ searchResult, setSearchResult ] = useState([]);
 
   const handleChange = (e) => {
     setSearchKey(e.target.value);
   }
 
   const fetchData = () => {
-    if (searchKey.length >= 3) {
-      fetch('https://api.edamam.com/api/recipes/v2?type=public&q='+ searchKey +'&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18')
-      .then(res => res.json())
-      .then(data => setSearchResult(data.hits));
-      console.log(searchResult);
-    }
+    fetch('https://api.edamam.com/api/recipes/v2?type=public&q='+ searchKey +'&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18')
+    .then(res => res.json())
+    .then(data => {
+      setSearchResult(data.hits);
+    });
   }
-
-  useEffect(() => {
-    fetchData();
-  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,6 +32,7 @@ export default function Search() {
 
   const handleSearchKeyClear = () => {
     setSearchKey('');
+    setSearchResult([]);
   }
 
   return (
@@ -59,13 +57,24 @@ export default function Search() {
               />
           </form>
         </section>
-        <section id='recomend-section'>
+        { searchResult.length > 0 
+          ? <section id="search-result">
+              {
+                searchResult && searchResult.map(data => {
+                  return(
+                    <RecipeCard 
+                    data={data.recipe}
+                    key={data.recipe.uri}/>
+                  )
+                })
+              }
+            </section>
+          : <section id='recomend-section'>
           <h2 className="search-section-title">
             Diets for you
           </h2>
           <div className="recomend-container">
             {
-              searchResult ?? 
               diets.map(diet => {
                 return(
                   <Link 
@@ -85,20 +94,32 @@ export default function Search() {
               })
             }
           </div>
-        </section>
-        <section id="search-result">
-          {
-            searchResult && searchResult.map(data => {
-              return(
-                <Link
-                  to={`/recipes/${data._links.self.href}`}
-                  key={data.recipe.uri}>
-                    <p>{data.recipe.label}</p>
-                </Link>
-              )
-            })
-          }
-        </section>
+          <h2 className="search-section-title">
+            Browse
+          </h2>
+          <div className="recomend-container">
+            {
+              dishTypes.map(type => {
+                return(
+                  <Link 
+                    to={`/dishTypes/${type.title}`}
+                    key={type.id}>
+                    <div className="recomend-card" >
+                      <img 
+                      src={type.cover}
+                      alt={type.title}
+                      />
+                      <p className="recomend-title">
+                        {type.title}
+                      </p>
+                    </div>
+                  </Link>
+                )
+              })
+            }
+          </div>
+        </section> }
+        
         <Footer />
       </main>
     </div>

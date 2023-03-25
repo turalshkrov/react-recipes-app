@@ -12,7 +12,7 @@ export default function Home() {
     <div className='page'>
         <Navbar />
         <main>
-        <section id="cuisine-type">
+        <section id="cuisine-types">
           <h2 className='section-title'>Browse the different cuisines of the world</h2>
           <div className='container'>
           {

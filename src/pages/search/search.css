@@ -12,6 +12,7 @@
     width: 250px;
     border: none;
     font-size: 1.05rem;
+    padding-left: .75rem;
 }
 #search-form svg {
     color: #303030;
@@ -30,6 +31,7 @@
 .recomend-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 2rem;
 }
 .recomend-card {
@@ -54,6 +56,12 @@
     margin-top: .75rem;
     font-weight: 600;
 }
+#search-result {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
 
 
 @media only screen and (max-width: 1300px) {
@@ -66,7 +74,10 @@
 @media only screen and (max-width: 1140px) {
     .recomend-card {
         width: 120px;
-        padding: 8px;
+        padding: 10px;
+    }
+    .recomend-title {
+        font-size: .95rem;
     }
 }
 
