@@ -58,9 +58,26 @@
 }
 #search-result {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
     margin: 2rem auto;
+}
+.button-container {
+    width: 100%;
+    display: flex;
+}
+.show-more {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin: 2rem auto 0;
+    cursor: pointer;
+    transition: .3s;
+}
+.show-more:hover {
+    border: 1px solid #3a9691;
+    color: #3a9691;
 }
 
 

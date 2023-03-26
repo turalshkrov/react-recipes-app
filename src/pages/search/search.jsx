@@ -12,6 +12,7 @@ import RecipeCard from '../../components/recipeCard/recipeCard';
 export default function Search() {
   const [ searchKey, setSearchKey ] = useState('');
   const [ searchResult, setSearchResult ] = useState([]);
+  const [ nextDataUrl, setNextDataUrl ] = useState();
 
   const handleChange = (e) => {
     setSearchKey(e.target.value);
@@ -22,7 +23,8 @@ export default function Search() {
     .then(res => res.json())
     .then(data => {
       setSearchResult(data.hits);
-    });
+      setNextDataUrl(data['_links'].next.href);
+      });
   }
 
   const handleSubmit = (e) => {
@@ -33,6 +35,15 @@ export default function Search() {
   const handleSearchKeyClear = () => {
     setSearchKey('');
     setSearchResult([]);
+  }
+
+  const showMore = () => {
+    fetch(nextDataUrl)
+    .then(res => res.json())
+    .then(data => {
+      setSearchResult([...searchResult,...data.hits]);
+      setNextDataUrl(data['_links'].next.href);
+    });
   }
 
   return (
@@ -58,17 +69,27 @@ export default function Search() {
           </form>
         </section>
         { searchResult.length > 0 
-          ? <section id="search-result">
-              {
-                searchResult && searchResult.map(data => {
-                  return(
-                    <RecipeCard 
-                    data={data.recipe}
-                    key={data.recipe.uri}/>
-                  )
-                })
-              }
-            </section>
+          ? <>
+            <section id="search-result">
+                {
+                  searchResult && searchResult.map(data => {
+                    return(
+                      <RecipeCard 
+                      data={data}
+                      key={data.recipe.uri}/>
+                    )
+                  })
+                }
+              </section>
+              {nextDataUrl && 
+              <div className='button-container'>
+                <button 
+                  className='show-more'
+                  onClick={showMore}>
+                  Show More
+                </button>
+              </div>}
+          </>
           : <section id='recomend-section'>
           <h2 className="search-section-title">
             Diets for you
@@ -119,7 +140,6 @@ export default function Search() {
             }
           </div>
         </section> }
-        
         <Footer />
       </main>
     </div>
