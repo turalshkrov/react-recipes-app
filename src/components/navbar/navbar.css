@@ -11,7 +11,7 @@
 }
 .navbar-logo {
     margin-bottom: .75rem;
-    color: #f93f23;
+    color: #3a9691;
 }
 .navbar a{
     width: fit-content;
@@ -27,7 +27,7 @@
     text-decoration: underline;
 }
 .navbar a.active {
-    color: #f93f23;
+    color: #3a9691;
 }
 .navbar a svg {
     font-size: 1.1rem;
@@ -41,6 +41,11 @@
     }
     .navbar a {
         font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .navbar {
+        width: 20%;
     }
 }
 
