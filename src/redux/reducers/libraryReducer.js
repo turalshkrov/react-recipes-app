@@ -22,13 +22,13 @@ export const libraryReducer = (state = INITAL_STATE, action) => {
                 ...state,
                 library: state.library.map(book => book.title === action.payload.bookTitle ? {
                     ...book,
-                    data: book.data.indexOf(action.payload.id) < 0 ? [...book.data, action.payload,id] : [...book.data]
+                    data: book.data.indexOf(action.payload.id) < 0 ? [...book.data, action.payload.id] : [...book.data]
                 } : book)
             }
         case REMOVE_FROM_LIBRARY:
             return {
                 ...state,
-                library: state.library.map(book => book.title === action.payload ? {
+                library: state.library.map(book => book.title === action.payload.bookTitle ? {
                     ...book,
                     data: [...book.data.filter(id => id !== action.payload.id)]
                 }: book)

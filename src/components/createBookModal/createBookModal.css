@@ -1,0 +1,16 @@
+#create-book-modal {
+    height: fit-content !important;
+}
+.create-book-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.create-book-actions .modal-btn {
+    width: 48%;
+    margin: 0 !important;
+}
+#hide-modal {
+    background-color: #6c757d;
+}
+

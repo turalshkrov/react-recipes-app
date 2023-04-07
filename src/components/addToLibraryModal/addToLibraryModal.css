@@ -1,0 +1,100 @@
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(50,50,50,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-show {
+    display: flex;
+}
+.modal-close {
+    display: none;
+}
+.modal-content {
+    width: 350px;
+    height: fit-content;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 4px #888;
+}
+
+.modal-content ::-webkit-scrollbar {
+    width: 3px;
+}
+.modal-content ::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: #888; 
+}
+
+.modal-title {
+    padding: .5rem 0 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.book-list {
+    height: 200px;
+    margin-top: 1rem;
+    overflow-y: scroll;
+}
+.book {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+    font-size: 1.1rem;
+}
+.create-book-m input {
+    outline: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #555;
+    font-size: 1rem;
+}
+.create-book-m {
+    margin-top: 1rem;
+}
+.modal-btn {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #3a9691;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+#create-book {
+    margin-top: 1rem;
+}
+.add-to-book {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+.remove-from-book {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    color: #b25466;
+    border: 1px solid #999;
+}
+#hide-modal {
+    margin-top: .5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .create-book-m {
+        display: block !important;
+    }
+}

@@ -2,26 +2,37 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faHeart, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../../components/footer/footer';
 import Navbar from '../../components/navbar/navbar';
+import AddToLibraryModal from '../../components/addToLibraryModal/addToLibraryModal';
+import { showAddToLIbraryModal } from '../../redux/actions/actions';
 import './recipe.css';
 
 export default function Recipe() {
   const [ data, setData ] = useState();
-  const params = useParams();
+  const id = useParams().id;
+  const addToLibraryModal = useSelector(state => state.modalReducer.modalVisibility.addToLibraryModal);
+  const dispatch = useDispatch();
+
+  const handleShowModal = () => {
+    dispatch(showAddToLIbraryModal());
+  }
 
   useEffect(() => {
-    fetch('https://api.edamam.com/api/recipes/v2/'+ params.id +'?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18')
+    fetch('https://api.edamam.com/api/recipes/v2/' + id + '?type=public&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18')
     .then(res => res.json())
     .then(data => {
       setData(data.recipe);
-      console.log(data.recipe);
     });
   }, [])
-  
+
   return (
     <div className='page'>
+      {
+        addToLibraryModal ? <AddToLibraryModal id={id}/> : null
+      }
       <Navbar />
       <main>
         {
@@ -62,17 +73,13 @@ export default function Recipe() {
                 </div>
               </div>
               <div className="recipe-actions">
-                <button className="btn add-to-library">
+                <button className="btn add-to-library" onClick={handleShowModal}>
                   <FontAwesomeIcon icon={faPlus}/>
                   <span>Add To Library</span>
                 </button>
-                <button className='btn add-to-favorite'>
-                  <FontAwesomeIcon icon={faHeart}/>
-                  <span>Add To Favorites</span>
-                </button>
                 <button className="btn share" onClick={() => {navigator.clipboard.writeText(location.href)}}>
-                  <FontAwesomeIcon icon={faShare}/>
-                  <span>Share</span>
+                  <FontAwesomeIcon icon={faCopy}/>
+                  <span>Copy Link</span>
                 </button>
               </div>
             </div>

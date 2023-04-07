@@ -61,13 +61,13 @@ hr {
     margin-top: 4rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
 }
 .btn {
-    border-radius: 20px;
+    width: 48%;
+    border-radius: 5px;
     cursor: pointer;
     transition: .3s;
-    padding: 12px 22px;
+    padding: 10px;
     color: #FFF;
     outline: none;
     border: none;
@@ -77,12 +77,10 @@ hr {
 }
 .add-to-library {
     background-color: #3a9691;
+    margin-right: 1rem;
 }
 .btn:hover {
     opacity: .85;
-}
-.add-to-favorite {
-    background-color: #dc3545;
 }
 .share {
     background-color: #6c757d;
@@ -229,19 +227,15 @@ hr {
     .recipe-actions {
         width: 80%;
         margin: 2rem auto;
-        justify-content: space-around;
+        flex-direction: column;
     }
-    .btn {
-        width: 55px;
-        height: 55px;
-        padding: 0;
-        border-radius: 50%;
-    }
-    .btn svg {
+    .add-to-library {
         margin: 0;
     }
-    .btn span {
-        display: none;
+    .btn {
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
     }
     .nutrient-item {
         width: 55px;

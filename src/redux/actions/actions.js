@@ -14,28 +14,40 @@ export const deleteBook = (title) => {
     }
 }
 
-export const addToLibrary = (id) => {
+export const addToLibrary = (bookTitle, id) => {
     return {
         type: actionTypes.ADD_TO_LIBRARY,
         payload: { bookTitle, id }
     }
 }
 
-export const removeFromLibrary = (id) => {
+export const removeFromLibrary = (bookTitle, id) => {
     return {
         type: actionTypes.REMOVE_FROM_LIBRARY,
         payload: { bookTitle, id }
     }
 }
 
-export const showModal = () => {
+export const showAddToLIbraryModal = () => {
     return {
-        type: actionTypes.SHOW_MODAL
+        type: actionTypes.SHOW_ADD_TO_LIBRARY_MODAL
     }
 }
 
-export const hideModal = () => {
+export const hideAddToLibraryModal = () => {
     return {
-        type: actionTypes.HiDE_MODAL
+        type: actionTypes.HIDE_ADD_TO_LIBRARY_MODAL
+    }
+}
+
+export const showCreateBookModal = () => {
+    return {
+        type: actionTypes.SHOW_CREATE_BOOK_MODAL
+    }
+}
+
+export const hideCreateBookModal = () => {
+    return {
+        type: actionTypes.HIDE_CREATE_BOOK_MODAL
     }
 }
