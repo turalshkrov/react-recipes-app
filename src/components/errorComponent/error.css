@@ -1,0 +1,11 @@
+.error-content {
+  padding: 25vh 0;
+  color: #333;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+ .error-content {
+  padding: 32vh 0;
+ }
+}

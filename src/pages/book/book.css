@@ -1,0 +1,17 @@
+.book-title {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: #333;
+}
+.empty-book {
+  padding: 25vh 0;
+  color: #333;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .empty-book {
+    padding: 32vh;
+  }
+}

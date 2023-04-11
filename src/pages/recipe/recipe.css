@@ -35,18 +35,18 @@ hr {
 }
 
 .recipe-summary {
-    width: 80%;
+    width: 100%;
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
 }
 .recipe-summary-item {
+    width: 33%;
     text-align: center;
     color: #333;
 }
 .recipe-summary-item-middle {
-    padding: 0 2rem;
     border-left: 1px solid #999;
     border-right: 1px solid #999;
 }
@@ -217,9 +217,6 @@ hr {
     .recipe-summary {
         width: 100%;
         padding: .5rem 0;
-    }
-    .recipe-summary-item-middle {
-        padding: 0 1rem;
     }
     .recipe-page-img {
         width: 250px;

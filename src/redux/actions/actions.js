@@ -51,3 +51,15 @@ export const hideCreateBookModal = () => {
         type: actionTypes.HIDE_CREATE_BOOK_MODAL
     }
 }
+
+export const showDeleteBookModal = () => {
+    return {
+        type: actionTypes.SHOW_DELETE_BOOK_MODAL
+    }
+}
+
+export const hideDeleteBookModal = () => {
+    return {
+        type: actionTypes.HIDE_DELETE_BOOK_MODAL
+    }
+}

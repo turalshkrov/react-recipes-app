@@ -36,15 +36,7 @@ export default function Navbar() {
           <p>Create Book</p>
         </div>
       </div>
-      <div className="book-links">
-        {
-          library.map(book => {
-            return(
-              <Link to={`/library/books/:${book.title}`} className='book-link' key={book.title}>{book.title}</Link>
-            )
-          })
-        }
-      </div>
+      
     </div>
   )
 }

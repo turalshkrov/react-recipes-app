@@ -31,10 +31,14 @@ main {
   width: 84%;
   margin-left: 16%;
   padding: 24px 40px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 section, footer {
   max-width: 1100px;
-  margin: auto;
+  height: fit-content;
 }
 
 @media only screen and (max-width: 1140px) {

@@ -3,34 +3,32 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../../components/navbar/navbar';
+import Error from '../../components/errorComponent/error';
 import Footer from '../../components/footer/footer';
 import diets from '../../data/diet.json';
 import dishTypes from '../../data/dishType.json';
 import './search.css';
 import RecipeCard from '../../components/recipeCard/recipeCard';
-import Preloader from '../../components/preloader/preloader';
 
 export default function Search() {
   const [ searchKey, setSearchKey ] = useState('');
   const [ searchResult, setSearchResult ] = useState([]);
   const [ nextDataUrl, setNextDataUrl ] = useState();
-  const [ load, setLoad ] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setSearchKey(e.target.value);
   }
 
   const fetchData = () => {
-    setLoad(true);
     fetch('https://api.edamam.com/api/recipes/v2?type=public&q='+ searchKey +'&app_id=9a1cb042&app_key=0db6324d573590aaace93aca7be99d18')
     .then(res => res.json())
     .then(data => {
       setSearchResult(data.hits);
       setNextDataUrl(data['_links'].next.href);
-      setLoad(false);
-    });
+    })
+    .catch(err => setError(err));
   }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchData();
@@ -42,13 +40,11 @@ export default function Search() {
   }
 
   const showMore = () => {
-    setLoad(true);
     fetch(nextDataUrl)
     .then(res => res.json())
     .then(data => {
       setSearchResult([...searchResult,...data.hits]);
       setNextDataUrl(data['_links'].next.href);
-      setLoad(false);
     });
   }
 
@@ -74,9 +70,10 @@ export default function Search() {
               />
           </form>
         </section>
-        {searchResult.length > 0 ? 
+        { error ? <Error /> :
+          searchResult.length > 0 ? 
           <>
-            <section id="search-result">
+            <section id="search-result" className='result-container'>
                 {
                   searchResult && searchResult.map(data => {
                     return(

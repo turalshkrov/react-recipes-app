@@ -12,7 +12,6 @@
     width: 250px;
     border: none;
     font-size: 1.05rem;
-    padding-left: .75rem;
 }
 #search-form svg {
     color: #303030;
@@ -34,12 +33,16 @@
     flex-wrap: wrap;
     margin-top: 2rem;
 }
+.recomend-container a {
+    width: 16%;
+}
 .recomend-card {
-    width: 160px;
+    width: 95%;
     padding: 15px;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
+    margin: auto;
     margin-bottom: 1rem;
     transition: .4s;
     background-color: #f1f1f1;
@@ -56,11 +59,12 @@
     margin-top: .75rem;
     font-weight: 600;
 }
-#search-result {
+.result-container {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
     margin: 2rem auto;
+
 }
 .button-container {
     width: 100%;
@@ -80,21 +84,12 @@
     color: #3a9691;
 }
 
-
-@media only screen and (max-width: 1300px) {
-    .recomend-card {
-        width: 150px;
-        padding: 12px;
-    }
-}
-
 @media only screen and (max-width: 1140px) {
     .recomend-card {
-        width: 120px;
         padding: 10px;
     }
     .recomend-title {
-        font-size: .95rem;
+        font-size: .9rem;
     }
 }
 
@@ -104,9 +99,13 @@
         padding: 1.5rem;
         justify-content: space-around;
     }
+    .recomend-container a {
+        width: 32%;
+    }
     .recomend-card {
-        width: 180px;
-        padding: 20px;
+        width: 90%;
+        padding: 12px;
+        margin: auto;
         margin-bottom: 2rem;
     }
     .search-section-title {
@@ -119,8 +118,7 @@
         padding: 0;
     }
     .recomend-card {
-        width: 150px;
-        padding: 12px;
+        width: 90%;
     }
 }
 
@@ -139,8 +137,10 @@
         margin: auto;
     }
     .recomend-card {
-        width: 100px;
+        width: 95%;
         padding: 8px;
+        margin: auto;
+        margin-bottom: 2rem;
     }
     .recomend-title {
         margin-top: .5rem;

@@ -1,10 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { hideCreateBookModal, createBook } from '../../redux/actions/actions';
 import './createBookModal.css';
 
 export default function CreateBookModal() {
+    const library = useSelector(state => state.libraryReducer.library);
     const dispatch = useDispatch();
     const [ newBook, setNewBook ] = useState('');
     
@@ -19,9 +20,16 @@ export default function CreateBookModal() {
     }
 
     const handleCreateBook =() => {
-        dispatch(createBook(newBook));
-        setNewBook('');
+        if (newBook.length > 0) {
+            dispatch(createBook(newBook));
+            setNewBook('');
+        }
+        dispatch(hideCreateBookModal());
     }
+
+    useEffect(() => {
+        localStorage.setItem('library', JSON.stringify(library))
+    }, [library]);
 
   return (
     <div className='modal' onClick={handleHideModal}>
