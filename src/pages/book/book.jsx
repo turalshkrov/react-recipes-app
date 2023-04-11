@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux/es/exports';
 import Navbar from '../../components/navbar/navbar';
 import Error from '../../components/errorComponent/error';
 import RecipeCard from '../../components/recipeCard/recipeCard';
-import './book.css';
 import Footer from '../../components/footer/footer';
+import './book.css';
 
 export default function Book() {
     const [recipes, setrecipes] = useState([]);
