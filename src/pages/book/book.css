@@ -12,6 +12,6 @@
 
 @media only screen and (max-width: 600px) {
   .empty-book {
-    padding: 32vh;
+    padding: 32vh 0;
   }
 }
