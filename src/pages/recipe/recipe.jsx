@@ -15,7 +15,6 @@ export default function Recipe() {
   const id = useParams().id;
   const addToLibraryModal = useSelector(state => state.modalReducer.modalVisibility.addToLibraryModal);
   const dispatch = useDispatch();
-  console.log(useParams());
   const handleShowModal = () => {
     dispatch(showAddToLIbraryModal());
   }

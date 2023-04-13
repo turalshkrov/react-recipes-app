@@ -68,8 +68,8 @@ export default function AddToLibraryModal(props) {
                     {
                         library.map(book => {
                             return(
-                                <div className='book' key={book.title}>
-                                    <p className="book-title">
+                                <div className='modal-book' key={book.title}>
+                                    <p className="modal-book-title">
                                         {book.title}
                                     </p>
                                     <button
