@@ -9,6 +9,7 @@ hr {
 }
 
 .recipe-page-container {
+    width: 90%;
     max-width: 1140px;
     padding: 3rem;
     display: flex;
