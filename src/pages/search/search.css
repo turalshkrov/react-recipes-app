@@ -60,6 +60,7 @@
     font-weight: 600;
 }
 .result-container {
+    width: 100%;
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
