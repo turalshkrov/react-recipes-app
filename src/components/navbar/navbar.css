@@ -94,7 +94,7 @@
 
 @media only screen and (max-width: 600px) {
     .navbar {
-        height: 80px;
+        height: 70px;
         width: 100vw;
         bottom: 0;
         padding: 0;
@@ -120,7 +120,7 @@
         padding: 0 1.75rem;
     }
     .navbar a svg{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin: 0;
     }
     .create-book {
