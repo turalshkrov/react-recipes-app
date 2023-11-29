@@ -107,7 +107,7 @@
         margin: 0 1.5rem;
     }
     .nav-menu-link-text {
-        font-size: .75rem;
+        display: none;
     }
     .navbar-logo {
         display: none;
@@ -120,7 +120,7 @@
         padding: 0 1.75rem;
     }
     .navbar a svg{
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin: 0;
     }
     .create-book {
